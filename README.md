@@ -1,2 +1,5 @@
-# pub-search
-Pub Search - a demo application for php-appengine-search
+# Pub Search #
+
+A demo application for php-appengine-search
+
+http://pub-search.appspot.com

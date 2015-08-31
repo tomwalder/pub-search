@@ -1,0 +1,40 @@
+application: pub-search
+version: alpha1
+runtime: php55
+api_version: 1
+threadsafe: true
+
+handlers:
+
+# Application static resources
+
+- url: /css
+  static_dir: public/css
+
+- url: /js
+  static_dir: public/js
+
+- url: /img
+  static_dir: public/img
+
+- url: /fonts
+  static_dir: public/fonts
+
+# Search handlers
+
+- url: /ac
+  script: public/autocomplete.php
+
+- url: /search
+  script: public/search.php
+
+# Populate search index
+
+- url: /populate
+  script: public/populate.php
+  login: admin
+
+# Default handler
+
+- url: .*
+  script: public/main.php
